@@ -30,3 +30,16 @@ printf("a = b")
             printf("a = b");
 
 交作业！
+
+ - - - - - - - - 
+ 1 Oc应该用NSLog
+ 2 注意代码美观，如缩进，空格使用等 如 
+ if(a>b)
+        printf("a > b");
+再如
+c = a + b;
+ 3 result有个黄色的三角好好想搞掉可是不会..
+看xCode的提示: Unused variable 'result'
+这个变量声明了却没有被使用,其实我的意思是用这个变量来保存结果，result = a + b; NSLog(@"%d",result);
+
+总体好评 95分~
