@@ -1,0 +1,32 @@
+2014.5.17
+打开看了一下虽然只有几行但是天书开始了..百度之
+scanf("%d%d",&a,&b);的意思好像是输入字符到a和b
+cin和cout是c++,然后scanf是c..哦，才发现标题是OC...
+为什么第16行的result有个黄色的三角好好想搞掉可是不会..
+输出和网上拼拼凑凑删删减减改来改去粗来这样。。
+        int c;
+        c=a+b;
+        printf("%d", c);
+突然想起来我这有两本老妈老早以前带回来的教科书，翻箱倒柜，一本java一本C程序设计，
+遂大喜，翻书..
+第二题网上直接有现成的答案...
+        if(a>b)puts("a > b\n");       //书上说\n是换行
+        else if(a == b)puts("a = b\n");     //puts是啥意思..应该和printf差不多
+        else puts("a < b\n");
+
+感觉照第一题的写法应该改成
+if(a>b);
+printf("a > b");
+else if(a<b)
+printf("a < b")
+else
+printf("a = b")
+然后标点不对。。改成
+        if(a>b)
+        printf("a > b");
+        else if(a<b)
+            printf("a < b");
+        else
+            printf("a = b");
+
+交作业！
