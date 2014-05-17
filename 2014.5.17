@@ -1,0 +1,91 @@
+2014.5.17
+今天的任务是：1.建立个Console应用，输出Hello World。2.建立个iOS应用 在模拟器上显示Hello World。
+昨天碎觉前百度了一下任务1，毫无头绪，又百度任务2，有完整的教程，于是碎觉惹。
+教程链接：http://blog.csdn.net/wxj_lake/article/details/7705920
+sublime咋么不敲回车自动换行咧，上传之后一行可以好长好长的赶脚。
+按照教程做到后来好像也木有怎么显示hello world,而且教程的图片都木有显示所以再找了一个教程。
+新教程链接：http://www.oschina.net/translate/your-first-ios-app-100-programmatically
+这下看起来好像简单多了...
+开始的操作一样，不过从single view application换成了Empty application.
+教程里说确保 “Use Automatic Reference Counting” 与 “Include Unit Tests” 已选中。可是我的窗口里并没有这两个选项。可能是版本问题..直接下一步。
+“创建一个 ViewController 类。点击 File, New, File…”终于知道怎么创建了= =，之前的教程把名词解释了好久但是没有说怎么操作.
+“首先，确保你在文件头中导入了您的 MainViewController 类”..好像只有上面一个，按教程在下面加了一条#import "MainViewController.h"
+设置 “root view controller” 属性，最开始运行的时候好像没有警告不记得了，虽然不明白= =还是找教程加了下面的几行。。斜杠星号是不显示的备注这个之前听谁说过..    
+    /*
+     	        创建我们的视图控制器并设置它为窗口根视图控制器
+    */
+    
+    MainViewController *viewController =
+    [[MainViewController alloc] init];
+    
+    self.window.rootViewController = viewController;
+
+下一步是添加元素到用户界面 - 一个文件框，一个按钮和一个标签。 
+私有属性可以在 MainViewController.m 文件的下面块内定义。
+1	@interface MainViewController()
+2	@end
+
+所以我们可以添加下面的行：
+1	@interface MainViewController()
+2	 
+3	@property (nonatomic, strong) UITextField *textField;
+4	@property (nonatomic, strong) UILabel *label;
+5	 
+6	@end
+这一步应该是添加一个框框和文字..星号后面是名字的意思嘛？
+
+现在找到 “viewDidLoad” 方法，它将在视图创建并加载到屏幕后执行 - 现在您应该看到如下：
+1	- (void)viewDidLoad
+2	{
+3	    [super viewDidLoad];
+4	    // Do any additional setup after loading the view.
+5	}
+这一步不太明白好像本来就有了。。屏幕后执行神马的。。
+
+现在创建文本框。使用 "self." 前缀引用我们之前创建的属性。
+view source
+print?
+01	- (void)viewDidLoad
+02	{
+03	    [super viewDidLoad];
+04	    // Do any additional setup after loading the view.
+05	     
+06	    // 创建文本框并设置位置与大小
+07	    self.textField = [[UITextField alloc]
+08	                              initWithFrame:
+09	                              CGRectMake(10.0f, 30.0f,
+10	                              300.0f, 30.0f)];
+11	     
+12	    // 改变文本框的边框样式让文本框可见
+13	    self.textField.borderStyle = UITextBorderStyleRoundedRect;
+14	     
+15	    /*
+16	      将文本框添加到主视图。
+17	      注意：UITextField 和其它一些 UI 类都是 UIView 的子类，这意味着它们可以添加到视图层次
+18	    */
+19	    [self.view addSubview:self.textField];
+20	     
+21	}
+
+虽然是直接全行复制的...还是试着输入了一下，self之后就有选项了好方便的说..
+10.0f，30.0f，300.0f，30.0f 看了半天没懂为啥有四个，
+百度之，从第一个到第四个分别是: x坐标,y坐标,宽度width,高度height;参考点是左上角
+可是为啥还有小数点。。
+运行看看
+有一个文！本！框！了！！！
+跑去改改大小...
+
+添加一些代码手动关闭软键盘。按照教程做完了。。虽然途中好几次出现警告和错误= =还是搞定了..
+框框做完了，下面教的是添加按钮。。额，往下看了一遍...好像和今天任务不太搭..我应该在模拟器上显示hello world
+跳步骤翻到标签，照教程搞定了！虽然是很奇怪的显示在文本框里。。。
+然后我把文本框神马的都删掉了。。。
+我好像不应该删掉的可以加斜杠星号啊啊啊啊。。
+任务2完成！
+
+任务1..
+搜了半天，莫有，改搜新建控制台应用程序，有了，开始好多都是用vs2008创建的感觉不对劲。
+最后终于发现一个用xCode创建的教程..这才对嘛
+http://blog.csdn.net/mobailwang/article/details/7452788
+。。。额。。。好像就完成了。。比任务2简单多了的感觉。。。
+这是完成了嘛。。
+

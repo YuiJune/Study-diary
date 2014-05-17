@@ -31,9 +31,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    // 创建hello world并设置位置与大小
+    // 创建hello world并设置位置与大小..这个大小好像没啥用..是原来在文本框的大小咩..
     self.label = [[UILabel alloc]
-                  initWithFrame:CGRectMake(115.0f, 150.0f, 200.0f, 30.0f)];
+                  initWithFrame:CGRectMake(115.0f, 150.0f, 150.0f, 30.0f)];
     self.label.text = @"Hello World!";
     [self.view addSubview:self.label];
     
