@@ -17,9 +17,12 @@ int main(int argc, const char * argv[])
         int a,b;
         scanf("%d%d",&a,&b);
         // 这里开始 Task 1 :通过程序读入的两个数字 输出两个数字的和
-        
+
         // 这里结束
-        NSLog(@"%d",result);
+        
+        // 这里开始 Task 2 :对于上面输入的 a b 输出AB的大小关系（用文字表示）
+        // 这里结束
+        
     }
     return 0;
 }
