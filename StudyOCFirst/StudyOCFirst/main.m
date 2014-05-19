@@ -23,22 +23,22 @@ int main(int argc, const char * argv[])
              printf("%d", c);   //输出结果，%d是指定的输出格式，d表示用十进制整数形式输出，c表示要输出变量的值
         */
         result = a + b;
-        NSLog (@"%d", result);
+        NSLog(@"%d", result);
         
         // 这里结束
         
         // 这里开始 Task 2 :对于上面输入的 a b 输出AB的大小关系（用文字表示）
         if (a > b)
         {
-            NSLog (@"a > b");
+            NSLog(@"a > b");
         }
         else if (a < b)
         {
-            NSLog (@"a < b");
+            NSLog(@"a < b");
         }
         else
         {
-            NSLog (@"a = b");
+            NSLog(@"a = b");
         }
         // 这里结束
         
