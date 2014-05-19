@@ -42,6 +42,11 @@ int main(int argc, const char * argv[])
         }
         // 这里结束
         
+        for(int i = 1; i < 100; i ++)
+        {
+            NSLog(@"这是第i行");
+        }
+        
     }
     return 0;
 }
