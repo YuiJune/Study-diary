@@ -1,0 +1,46 @@
+2014.5.19
+什么，居然20了...
+昨天的任务...师父忽悠我T_T，学过的里面做不粗来..
+if了半天，不造怎么写...
+今天早上来公司惹，问问程序猿..不取余值怎么循环两句话也
+程序猿就教我惹~~~
+BOOL xiaohuang = YES;
+        
+        for (int i = 1; i <= 100; i++) {
+            
+            NSString *jiou;
+            
+            if (xiaohuang)
+                jiou = @"jishuhang ";
+            else
+                jiou = @"oushuhang ";
+            
+            NSLog(@"--------%@-----duoshaohang  %d",jiou, i);
+            
+            xiaohuang = !xiaohuang;
+        }
+
+我回来加工了一下...改成
+        BOOL jiou = YES;
+        
+        for (int i = 1; i <= 100; i++)
+        {
+            NSString * jishu;
+            
+            if (jiou)
+            {
+                jishu = @"这是奇数行";
+            }
+            else
+            {
+                jishu = @"这是偶数行";
+            }
+            jiou = !jiou;
+            
+            NSLog(@"这是第%d行,%@",i,jishu);
+        }
+
+
+if的中括号是不是可以不加0.0，那我之前大于小于也可以不加嘛0.0.。。
+
+交作业~~！

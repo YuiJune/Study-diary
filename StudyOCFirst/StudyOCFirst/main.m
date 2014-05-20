@@ -42,9 +42,23 @@ int main(int argc, const char * argv[])
         }
         // 这里结束
         
-        for(int i = 1; i < 100; i ++)
+        BOOL jiou = YES;
+        
+        for (int i = 1; i <= 100; i++)
         {
-            NSLog(@"这是第i行");
+            NSString * jishu;
+            
+            if (jiou)
+            {
+                jishu = @"这是奇数行";
+            }
+            else
+            {
+                jishu = @"这是偶数行";
+            }
+            jiou = !jiou;
+            
+            NSLog(@"这是第%d行,%@", i, jishu);
         }
     
     }
