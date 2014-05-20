@@ -21,23 +21,23 @@ BOOL xiaohuang = YES;
         }
 
 我回来加工了一下...改成
-        BOOL jiou = YES;
+        BOOL jiou = YES;                         //判断奇偶对不对
         
-        for (int i = 1; i <= 100; i++)
+        for (int i = 1; i <= 100; i++)           //这个是数字的循环
         {
-            NSString * jishu;
+            NSString * jishu;                    //定义一个叫jishu的对象
             
-            if (jiou)
-            {
-                jishu = @"这是奇数行";
+            if (jiou)                            //如果奇偶是yes
+            {                                    //一句话的时候中括号可以没有
+                jishu = @"这是奇数行";            //奇数就写成这是奇数行
+            } 
+            else                                 //不然的话
+            { 
+                jishu = @"这是偶数行";            //奇数就写成这是偶数行
             }
-            else
-            {
-                jishu = @"这是偶数行";
-            }
-            jiou = !jiou;
+            jiou = !jiou;                        //完了再翻一翻
             
-            NSLog(@"这是第%d行,%@",i,jishu);
+            NSLog(@"这是第%d行,%@",i,jishu);      //最后所以整句话就是这是第多少行，这是奇/偶数行。这句话只能放最后面。。
         }
 
 
