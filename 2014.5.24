@@ -1,0 +1,41 @@
+2014.5.24
+师父提示了一下！我就大概可能也许会了！虽然不知道这样写麻烦不麻烦。。。
+int c;
+        NSLog(@"请选择:\n0 退出，1 加法，2 减法，3 乘法，4 除法");
+        scanf("%d",&c);
+        if (c == 1)
+        {
+            NSLog(@"请输入两个整数");
+            scanf("%d%d", &a, &b);
+            result = a + b;
+            NSLog(@"%d", result);
+        }
+        if (c == 2)
+        {
+            NSLog(@"请输入两个整数");
+            scanf("%d%d", &a, &b);
+            result = a - b;
+            NSLog(@"%d", result);
+        }
+        if (c == 3)
+        {
+            NSLog(@"请输入两个整数");
+            scanf("%d%d", &a, &b);
+            result = a * b;
+            NSLog(@"%d", result);
+        }
+        if (c == 4)
+        {
+            NSLog(@"请输入两个整数");
+            scanf("%d%d", &a, &b);
+            result = a / b;
+            NSLog(@"%d", result);
+        }
+        if (c == 0)
+        {
+            exit(0);
+        }
+
+
+然后。。。我卡在不知道怎么让他循环起来了QAQ
+好想最后写个返回第78行T_T。。。

@@ -42,7 +42,7 @@ int main(int argc, const char * argv[])
         }
         // 这里结束
         
-        BOOL jiou = YES;
+        /*BOOL jiou = YES;
         
         for (int i = 1; i <= 100; i++)
         {
@@ -60,7 +60,57 @@ int main(int argc, const char * argv[])
             
             NSLog(@"这是第%d行,%@", i, jishu);
         }
-    
+         */
+        for (int i = 1 ; i <= 100 ; i++)
+        {
+            if (i%2 == 0)
+            {
+                NSLog(@"这是第%d行,是%@行",i,@"奇数");
+            }
+            else
+            {
+                NSLog(@"这是第%d行,是%@行",i,@"偶数");
+            }
+        }
+        
+        
+        int c;
+        NSLog(@"请选择:\n0 退出，1 加法，2 减法，3 乘法，4 除法");
+        scanf("%d",&c);
+        if (c == 1)
+        {
+            NSLog(@"请输入两个整数");
+            scanf("%d%d", &a, &b);
+            result = a + b;
+            NSLog(@"%d", result);
+        }
+        if (c == 2)
+        {
+            NSLog(@"请输入两个整数");
+            scanf("%d%d", &a, &b);
+            result = a - b;
+            NSLog(@"%d", result);
+        }
+        if (c == 3)
+        {
+            NSLog(@"请输入两个整数");
+            scanf("%d%d", &a, &b);
+            result = a * b;
+            NSLog(@"%d", result);
+        }
+        if (c == 4)
+        {
+            NSLog(@"请输入两个整数");
+            scanf("%d%d", &a, &b);
+            result = a / b;
+            NSLog(@"%d", result);
+        }
+        if (c == 0)
+        {
+            exit(0);
+        }
+        
+        
     }
     return 0;
 }
