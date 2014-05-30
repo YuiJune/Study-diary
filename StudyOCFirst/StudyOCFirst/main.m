@@ -93,30 +93,39 @@ int main(int argc, const char * argv[])
         scanf("%d%d", &a, &b);
 
         
-        while (c != 0)
+        while (YES)
         {
-            switch (c) {
-                case '1':
-                    r = a + b;
-                    break;
-                case '2':
-                    r = a - b;
-                    break;
-                case '3':
-                    r = a * b;
-                    break;
-                case '4':
-                    r = a / b;
-                    break;
-                
-                if (c == 0)
-                    exit(0);
-                break;
-                default:
-                    NSLog(@"Unknown operator.");
+            if (c == 0)
+            {
+                exit(0);
                 break;
             }
-            
+            else
+            {
+                switch (c)
+                {
+                    case '1':
+                    r = a + b;
+                    NSLog(@"%d",r);
+                        break;
+                    case '2':
+                    r = a - b;
+                    NSLog(@"%d",r);
+                        break;
+                    case '3':
+                    r = a * b;
+                    NSLog(@"%d",r);
+                        break;
+                    case '4':
+                    r = a / b;
+                    NSLog(@"%d",r);
+                        break;
+                    default:
+                    NSLog(@"Unknown operator.");
+                        break;
+                }
+            }
+        
         }
     
         return 0;
