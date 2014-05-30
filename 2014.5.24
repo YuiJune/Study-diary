@@ -39,3 +39,64 @@ int c;
 
 然后。。。我卡在不知道怎么让他循环起来了QAQ
 好想最后写个返回第78行T_T。。。
+
+
+先缩成这样。。。
+        int c;
+        NSLog(@"请选择:\n0 退出，1 加法，2 减法，3 乘法，4 除法");
+        scanf("%d",&c);
+        NSLog(@"请输入两个整数");
+        scanf("%d%d", &a, &b);
+
+        if (c == 1)
+        {
+            result = a + b;
+            NSLog(@"%d", result);
+        }
+        if (c == 2)
+        {
+            result = a - b;
+            NSLog(@"%d", result);
+        }
+        if (c == 3)
+        {
+            result = a * b;
+            NSLog(@"%d", result);
+        }
+        if (c == 4)
+        {
+            result = a / b;
+            NSLog(@"%d", result);
+        }
+        if (c == 0)
+        {
+            exit(0);
+        }
+        
+
+再加switch
+        int c;
+        NSLog(@"请选择:\n0 退出，1 加法，2 减法，3 乘法，4 除法");
+        scanf("%d",&c);
+        NSLog(@"请输入两个整数");
+        scanf("%d%d", &a, &b);
+        switch (c)
+        {
+            case 1:
+                result = a + b; break;
+            case 2:
+                result = a - b; break;
+            case 3:
+                result = a * b; break;
+            case 4:
+                result = a / b; break;
+            case 0:
+                exit(0);
+        default: NSLog(@"输入了错误的数字!");
+        }
+        NSLog(@"%d", result);
+        
+可是不管用QAQ，而且这样while加在哪里呀。。
+
+去百度。。。
+

@@ -1,0 +1,230 @@
+2014.5.27-29
+循环结构
+
+while是先判断条件然后，如果条件成立则执行代码。do...while是先执行然后判断条件是否成立，所以do...while的代码一定会执行一次。for一般是知道执行循环的次数的时候使用。
+
+在循环中还有continue和break需要知道。continue是跳过本次循环，执行下次循环。break是跳出整个循环结构。
+       //while  
+        NSLog(@"while");  
+        int i = 0;  
+        while (i < 5) {  
+            NSLog(@"这是第%d个数字",i);  
+            i ++;  
+        }  
+
+都29号惹，还木有做好，拖作业好严重。。
+
+            r = a + b;
+            
+            continue;
+        }
+        while (c == 2)
+        {
+            r = a - b;
+            NSLog(@"%d", r);
+            break;
+        }
+        while (c == 3)
+        {
+            r = a * b;
+            NSLog(@"%d", r);
+            break;
+        }
+        while (c == 4)
+        {
+            r = a / b;
+            NSLog(@"%d", r);
+            break;
+        }
+        while (c == 0)
+        {
+            exit(0);
+        }
+        
+        NSLog(@"%d", r);
+           }
+
+不行唉。。。
+
+桑个礼拜木有时间研究..
+今天是5月份最后一天..
+每天都热热的不想动= =
+不行一定要做好了。。 = =
+工作的时候有翻过书。。书上写的计算器多了好多，double，char什么的词，while到底放在哪里和什么样的格式才对实在很头疼。
+再百度一次好了
+
+01 // Implement a Calculator class
+02 
+03 #import <Foundation/Foundation.h>
+04 
+05 @interface Calculator: NSObject
+06 {
+07     double accumulator;
+08 }
+09 
+10 // accumulator methods
+11 -(void)        setAccumulator: (double) value;
+12 -(void)        clear;
+13 -(double)    accumulator;
+14 
+15 // arithmetic methods
+16 -(void)        add: (double) value;
+17 -(void)        subtract: (double) value;
+18 -(void)        multiply: (double) value;
+19 -(void)        divide: (double) value;
+20 
+21 @end
+22 
+23 
+24 @implementation Calculator
+25 
+26 -(void)        setAccumulator: (double) value
+27 {
+28     accumulator = value;
+29 }
+30 
+31 -(void)        clear
+32 {
+33     accumulator = 0;
+34 }
+35 
+36 -(double)    accumulator
+37 {
+38     return accumulator;
+39 }
+40 
+41 -(void)        add: (double) value
+42 {
+43     accumulator += value;
+44 }
+45 
+46 -(void)        subtract: (double) value
+47 {
+48     accumulator -= value;
+49 }
+50 
+51 -(void)        multiply: (double) value
+52 {
+53     accumulator *= value;
+54 }
+55 
+56 -(void)        divide: (double) value
+57 {
+58     accumulator /= value;
+59 }
+60 
+61 @end
+62 
+63 
+64 int main (int argc, const char * argv[])
+65 {
+66     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+67     Calculator *deskCalc;
+68     
+69     deskCalc = [[Calculator alloc] init];
+70     
+71     [deskCalc clear];
+72     [deskCalc setAccumulator: 100.0];
+73     [deskCalc add: 200.];
+74     [deskCalc divide: 15.0];
+75     [deskCalc subtract: 10.0];
+76     [deskCalc multiply: 5];
+77     NSLog(@"The result is %g", [deskCalc accumulator]);
+78     [deskCalc release];
+79     
+80     [pool drain];
+81     return 0;
+82 }
+
+最终输出结果：
+
+The result is 50
+
+和书上的差不多。。
+。。。果然还是看不懂啦
+虽然很像但是真的不是跑偏了嘛。。
+这里也没有while和switch。。
+
+再百度。。
+064 int main (int argc, const char * argv[])
+065 {
+066     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+067     double        value1, value2;
+068     char        operator;
+069     Calculator    *deskCalc = [[Calculator alloc] init];
+070     
+071     NSLog(@"Type in your expression.");
+072     scanf("%lf %c %lf", &value1, &operator, &value2);
+073     
+074     [deskCalc setAccumulator: value1];
+075     
+076     switch (operator) {
+077         case '+':
+078             [deskCalc add: value2];
+079             break;
+080         case '-':
+081             [deskCalc subtract: value2];
+082             break;
+083         case '*':
+084             [deskCalc multiply: value2];
+085             break;
+086         case '/':
+087             if (value2 == 0)
+088                 NSLog(@"Division by zero.");
+089             else
+090                 [deskCalc divide: value2];
+091             break;
+092         default:
+093             NSLog(@"Unknown operator.");
+094             break;
+095     }
+096     
+097     NSLog(@"%.2f", [deskCalc accumulator]);
+098     [deskCalc release];
+099     
+100     [pool drain];
+101     return 0;
+102 }
+
+最上面一直不对会不会是因为case后面跟的数字电脑不知道是数字还是字符的原因啊。。
+那是不是要加一个''...
+可是这里没有while啊岂可修。。
+
+        int a, b, c;
+        int r = 0;
+        NSLog(@"请选择:\n0 退出，1 加法，2 减法，3 乘法，4 除法");
+        scanf("%d",&c);
+        NSLog(@"请输入两个整数");
+        scanf("%d%d", &a, &b);
+
+        
+        while (c != 0)
+        {
+            switch (c) {
+                case '1':
+                    r = a + b;
+                    break;
+                case '2':
+                    r = a - b;
+                    break;
+                case '3':
+                    r = a * b;
+                    break;
+                case '4':
+                    r = a / b;
+                    break;
+                
+                if (c == 0)
+                    exit(0);
+                break;
+                default:
+                    NSLog(@"Unknown operator.");
+                break;
+            }
+            
+        }
+    
+        return 0;
+    }
+}
+先酱紫。。。一直循环Unknown operator。。。
