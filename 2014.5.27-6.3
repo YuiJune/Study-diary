@@ -1,4 +1,4 @@
-2014.5.27-29
+2014.5.27-6.3
 循环结构
 
 while是先判断条件然后，如果条件成立则执行代码。do...while是先执行然后判断条件是否成立，所以do...while的代码一定会执行一次。for一般是知道执行循环的次数的时候使用。
@@ -228,3 +228,126 @@ The result is 50
     }
 }
 先酱紫。。。一直循环Unknown operator。。。
+
+        
+        int a, b, c;
+        int r = 0;
+        NSLog(@"请选择:\n0 退出，1 加法，2 减法，3 乘法，4 除法");
+        scanf("%d",&c);
+        NSLog(@"请输入两个整数");
+        scanf("%d%d", &a, &b);
+
+        
+        while (YES)
+        {
+            if (c == 0)
+            {
+                exit(0);
+                break;
+            }
+            else
+            {
+                switch (c)
+                {
+                    case '1':
+                    r = a + b;
+                    NSLog(@"%d",r);
+                        break;
+                    case '2':
+                    r = a - b;
+                    NSLog(@"%d",r);
+                        break;
+                    case '3':
+                    r = a * b;
+                    NSLog(@"%d",r);
+                        break;
+                    case '4':
+                    r = a / b;
+                    NSLog(@"%d",r);
+                        break;
+                    default:
+                    NSLog(@"Unknown operator.");
+                        break;
+                }
+            }
+        
+        }
+    
+        return 0;
+    }
+}
+还是循环不对。。。
+
+逻辑流程图。。。
+
+定义 a b c
+输出 请选择1234
+输入一个数c
+输出 请输入两个整数
+输入两个整数a和b，
+
+循环，当c不等于0的时候
+
+如果，c不等于1234，
+那就显示输入错误，请选择1234，
+不然，
+当c等于1，做加法，
+当c等于2，做减法，
+当c等于3，做乘法
+当c等于4，做除法
+然后回到请输入1234
+
+当c等于0的时候
+退出程序
+
+
+师父说这样逻辑不清-0-
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+        int a, b, c;
+        int r = 0;
+        NSString *operate = nil;
+        while (YES)
+        {
+            NSLog(@"请选择:\n0 退出，1 加法，2 减法，3 乘法，4 除法");
+            scanf("%d",&c);
+            if (c == 0)
+            {
+                break;
+            }
+            NSLog(@"请输入两个整数");
+            scanf("%d%d", &a, &b);
+            
+            switch (c)
+            {
+                case 1:
+                    r = a + b;
+                    operate = @"+";
+                    break;
+                case 2:
+                    r = a - b;
+                    operate = @"-";
+                    break;
+                case 3:
+                    r = a * b;
+                    operate = @"*";
+                    break;
+                case 4:
+                    r = a / b;
+                    operate = @"/";
+                    break;
+                
+                default:
+                    NSLog(@"Unknown operator.");
+                    break;
+            }
+            NSLog(@"%d %@ %d = %d", a, operate, b, r);
+        }
+
+...原来把c＝0放到最前面了啊这样果然啊啊啊原来啊啊啊
+之前虽然想过把while循环放到最前面可是一直没试总觉得会好麻烦更加不会了
+＝ ＝师父一写就看起来好简单。。。愁。。为虾米我想不粗来。。
+拿去跑一跑。。
+再话说为啥等于要两个才行。，
+饿。。先碎觉好了

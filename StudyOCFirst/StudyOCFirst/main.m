@@ -85,6 +85,8 @@ int main(int argc, const char * argv[])
         }
         */
         
+        
+        /*
         int a, b, c;
         int r = 0;
         NSLog(@"请选择:\n0 退出，1 加法，2 减法，3 乘法，4 除法");
@@ -127,8 +129,55 @@ int main(int argc, const char * argv[])
             }
         
         }
-    
+        if (NO)
+        {
+            exit(0);
+        }
         return 0;
     }
 }
-
+        错误的作业
+         */
+        
+         //师父的答案
+        int a, b, c;
+        int r = 0;
+        NSString *operate = nil;
+        while (YES)
+        {
+            NSLog(@"请选择:\n0 退出，1 加法，2 减法，3 乘法，4 除法");
+            scanf("%d",&c);
+            if (c == 0)
+            {
+                break;
+            }
+            NSLog(@"请输入两个整数");
+            scanf("%d%d", &a, &b);
+            
+            switch (c)
+            {
+                case 1:
+                    r = a + b;
+                    operate = @"+";
+                    break;
+                case 2:
+                    r = a - b;
+                    operate = @"-";
+                    break;
+                case 3:
+                    r = a * b;
+                    operate = @"*";
+                    break;
+                case 4:
+                    r = a / b;
+                    operate = @"/";
+                    break;
+                    
+                default:
+                    NSLog(@"Unknown operator.");
+                    break;
+            }
+            NSLog(@"%d %@ %d = %d", a, operate, b, r);
+        }
+    }
+}
